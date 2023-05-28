@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/imgMovie"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtMovieName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imgMovie"
+            app:layout_constraintTop_toTopOf="@+id/imgMovie"
+            tools:text="Movies Name" />
+
+        <TextView
+            android:id="@+id/txtMovieDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ellipsize="end"
+            android:lineSpacingExtra="8dp"
+            android:maxLines="2"
+            android:text="We need to understand what depression is. Now, what is a “low”? What is it that happens within you? Fundamentally, you expected something to happen "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtMovieName"
+            app:layout_constraintTop_toBottomOf="@+id/txtMovieName" />
+
+        <ImageView
+            android:id="@+id/imgMovieFav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_love"
+            app:layout_constraintStart_toStartOf="@+id/txtMovieDesc"
+            app:layout_constraintTop_toBottomOf="@+id/txtMovieDesc" />
+
+        <TextView
+            android:id="@+id/txtRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="90%"
+            app:layout_constraintBottom_toBottomOf="@+id/imgMovieFav"
+            app:layout_constraintStart_toEndOf="@+id/imgMovieFav"
+            app:layout_constraintTop_toTopOf="@+id/imgMovieFav" />
+
+        <ImageView
+            android:id="@+id/imgMovieComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_love"
+            app:layout_constraintBottom_toBottomOf="@+id/txtRate"
+            app:layout_constraintStart_toEndOf="@+id/txtRate"
+            app:layout_constraintTop_toTopOf="@+id/txtRate" />
+
+        <TextView
+            android:id="@+id/txtMovieCommentCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="90k"
+            app:layout_constraintBottom_toBottomOf="@+id/imgMovieComment"
+            app:layout_constraintStart_toEndOf="@+id/imgMovieComment"
+            app:layout_constraintTop_toTopOf="@+id/imgMovieComment" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
